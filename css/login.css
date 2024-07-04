@@ -1,0 +1,88 @@
+
+body{
+    background-color: rgb(83, 80, 80)
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.Login-form{
+    width: 50vw;
+    height: 110vh;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(27, 25, 25);
+    flex-direction: column;
+    color: whitesmoke;
+}
+
+#spotifyLogo{
+    width: 25px;
+    height: 25px;
+}
+
+.Login-form ul li{
+    list-style: none;
+}
+
+.google-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 11px 5px;
+    margin: 10px;
+    width: 21vw;
+    border: 1px solid rgb(171, 155, 155);
+    border-radius: 15px;
+    background-color: black;
+    color: whitesmoke;
+    cursor: pointer;
+}
+.line{
+    width: 40vw;
+    border: 1px solid black;   
+}
+.userData{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 10px;
+    top: 32px;
+    left: 30px;
+    height: 37vh;
+}
+.userData input{
+    background-color: black;
+    color: whitesmoke;
+    width: 21vw;
+    height: 4vh;
+    padding: 4px;
+    margin: -9px 0px;
+}
+
+.loginButton{
+    border: 1px solid black;
+    border-radius: 23px;;
+    background-color: rgb(15, 214, 18);
+    font-size: 15px;
+    font-weight:700;
+    cursor: pointer;
+    width: 21vw;
+    height: 6vh;
+}
+.loginButton:hover{
+    width: 22vw;
+    font-weight: bolder;
+}
+
+.Login-form a{
+    margin: 15px;
+    color: whitesmoke;
+    font-size: 13px;
+    font-weight: 600;
+}
