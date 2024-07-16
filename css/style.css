@@ -319,6 +319,44 @@ body {
     display: none;
 }
 
+/* Search Input Initial State */
+.search-input {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    width: 0;
+    margin: 10px 0 0 10px;
+    transition: width 0.4s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Search Input Active State */
+.search-input.active {
+    width: 200px;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Search Button */
+.search-btn {
+    padding: 10px 20px;
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.search-btn:hover {
+    background-color: #1aa34a;
+}
+
+
 @media (max-width: 1400px) {
     .left {
         position: absolute;

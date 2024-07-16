@@ -125,8 +125,30 @@ async function displayAlbums() {
         }
         playMusic(songs[0])
     });
+}
 
+document.getElementById('search-icon').addEventListener('click', () => {
+    const searchInput = document.querySelector('.search-input');
+    searchInput.classList.toggle('active');
+    if (searchInput.classList.contains('active')) {
+        searchInput.focus();
+    } else {
+        searchInput.value = '';
+        searchSongs('');
+    }
+});
 
+document.querySelector('.search-input').addEventListener('keyup', (event) => {
+    const query = event.target.value.toLowerCase();
+    searchSongs(query);
+});
+function searchSongs(query) {
+    const songItems = document.querySelectorAll('.songList ul li');
+    songItems.forEach(item => {
+        const songName = item.querySelector('.info > div:first-child').textContent.toLowerCase();
+        const displayStyle = songName.includes(query) ? 'flex' : 'none';
+        item.style.display = displayStyle;
+    });
 }
 
 async function main() {
@@ -214,7 +236,5 @@ async function main() {
     document.getElementById('loginButton').addEventListener('click', function() {
         window.location.href = 'LoginForm.html';
     });
-
-
 }
 main()
