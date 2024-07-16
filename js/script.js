@@ -86,7 +86,6 @@ async function displayAlbums() {
     if (h1) {
         h1.parentNode.removeChild(h1)
     }
-    console.log(div);
 
     let anchor = div.getElementsByTagName("a")
 
@@ -97,8 +96,6 @@ async function displayAlbums() {
 
         if (element.href.includes("/songs/")) {
             let folder = element.href.split("/").slice(-1)[0]
-            console.log(folder);
-
             //get metadata for the folder
             let a = await fetch(`/songs/${folder}/info.json`);
             let reponse = await a.json();
